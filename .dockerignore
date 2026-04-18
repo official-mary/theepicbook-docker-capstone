@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Git
+.git
+.gitignore
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Nginx
+nginx/certs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Development files
+.eslintrc.json
+.eslintignore
+.travis.yml
+
+# Docs
+docs/
+README.md
