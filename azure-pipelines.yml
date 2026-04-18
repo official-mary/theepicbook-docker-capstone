@@ -1,0 +1,35 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: Default
+
+stages:
+
+- stage: Build
+  displayName: 'Build Docker Image'
+  jobs:
+  - job: Build
+    steps:
+    - script: |
+        echo "Building image with tag: $(Build.BuildId)"
+        cd $(Build.SourcesDirectory)
+        docker build -t theepicbook-app:$(Build.BuildId) .
+        docker tag theepicbook-app:$(Build.BuildId) theepicbook-app:latest
+      displayName: 'Build Docker image'
+
+- stage: Deploy
+  displayName: 'Deploy with Docker Compose'
+  dependsOn: Build
+  jobs:
+  - job: Deploy
+    steps:
+    - script: |
+        cd ~/theepicbook-docker-capstone
+        git pull origin main
+        docker compose up --build -d
+        docker image prune -f
+        echo "Deployed successfully! Build: $(Build.BuildId)"
+      displayName: 'Deploy to VM'
