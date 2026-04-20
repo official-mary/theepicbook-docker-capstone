@@ -34,10 +34,10 @@
 ## Ports
 | Port | Public | Service | Purpose |
 |------|--------|---------|---------|
-| 80 | ✅ | Nginx | HTTP → HTTPS redirect |
-| 443 | ✅ | Nginx | HTTPS traffic |
-| 3000 | ❌ | Node.js | Internal only |
-| 3306 | ❌ | MySQL | Internal only |
+| 80 |  | Nginx | HTTP → HTTPS redirect |
+| 443 |  | Nginx | HTTPS traffic |
+| 3000 |  | Node.js | Internal only |
+| 3306 |  | MySQL | Internal only |
 
 ## Volumes
 | Volume | Service | Purpose |

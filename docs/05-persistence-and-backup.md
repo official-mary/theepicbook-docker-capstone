@@ -12,10 +12,10 @@ restarts including full stack down/up cycles.
 ## What Persists
 | Data | Storage | Survives docker compose down? |
 |------|---------|-------------------------------|
-| MySQL tables + rows | db_data volume | ✅ Yes |
-| App code | Container image | ✅ Yes (rebuilt on deploy) |
-| SSL certs | Host filesystem | ✅ Yes |
-| Logs | Docker json-file | ✅ Yes (with rotation) |
+| MySQL tables + rows | db_data volume |  Yes |
+| App code | Container image |  Yes (rebuilt on deploy) |
+| SSL certs | Host filesystem |  Yes |
+| Logs | Docker json-file |  Yes (with rotation) |
 
 ## Backup Procedure
 
@@ -53,6 +53,6 @@ docker exec theepicbook-docker-capstone-db-1 \
 | Database dropped | ERROR 1146 Table doesn't exist |
 | Restore from backup | Success |
 | Books after restore | 54 |
-| App serving data | ✅ 200 OK |
+| App serving data |  200 OK |
 
 Restore completed in under 5 seconds.

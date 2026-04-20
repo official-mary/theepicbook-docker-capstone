@@ -8,8 +8,8 @@ All port 80 traffic is permanently redirected to HTTPS:
 server {
   listen 80;
   return 301 https://$host$request_uri;
-}
-```
+}```
+
 
 ### HTTPS Server
 Listens on port 443, terminates TLS, proxies to app:
