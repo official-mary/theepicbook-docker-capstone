@@ -28,8 +28,8 @@
 | DB port published |  No |
 | App port published |  No |
 
-## Public URL
-https://20.87.53.29
+ # public url
+ https:// (ip address)
 
 ## Persistence Verified
 Data survives full stack down/up cycles via db_data named volume.
