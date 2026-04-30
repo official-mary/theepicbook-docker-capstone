@@ -17,3 +17,11 @@ Node.js + Express + Sequelize + MySQL + Nginx + Docker Compose + Terraform + Git
 
 ## Architecture
 Browser → Nginx (port 443) → Node.js app (port 3000) → MySQL (port 3306)
+
+## Quick Start
+1. Clone the repository
+2. Copy `.env.example` to `.env` and configure your environment variables
+3. Run `docker-compose up --build` to start the application
+
+## Environment Variables
+See `.env.example` for required environment variables. Copy it to `.env` and fill in your actual values.
